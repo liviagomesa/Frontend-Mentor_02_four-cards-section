@@ -72,6 +72,11 @@ It took me 3,5 hours to complete this challenge.
    However, its content (i.e., children's children) will continue to occupy an "auto" dimension (i.e., enough to fit its content). So in these cases, you may notice a blank space in your cell (below or to the right).
    So, if you want the children of the grid container not to expand, creating this blank space, one strategy is to define a div parent which will become the new container's child.
 
+5. Instead of creating a div to the colored bars, it would be simpler to define a top border, like this:
+   ```css
+   border-top: 3px solid red;
+   ```
+
 ### Continued development
 
 I'm not completely comfortable with the concepts and techniques below - but I think they're useful and I want to refine by focusing in future projects:
