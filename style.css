@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* This code was made for mobile devices */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+    font-weight: 400;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+}
+
+main {
+    margin: 90px 22px;
+}
+
+section {
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 24px;
+    overflow: hidden; /* This hides the colored bar overflow (straight edges) */
+}
+
+.superior {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 24px;
+    color: hsl(234, 12%, 34%);
+}
+
+h2 {
+    margin: 26px 0 82px 0;
+}
+
+h3 {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+    font-size: 20px;
+    line-height: 1em;
+}
+
+h4 {
+    font-size: 24px;
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+
+p {
+    margin: 16px 0 36px 0;
+}
+
+.image { /* It was necessary to create a div-parent to the image. This way, we could create an larger area to displace the image 
+    (to the right). */
+    text-align: right;
+}
+
+.card {
+    margin: 22px;
+}
+
+.bar {
+    height: 3px;
+}
+
+.red {
+    background-color: hsl(0, 78%, 62%);
+}
+
+.cyan {
+    background-color: hsl(180, 62%, 55%);
+}
+
+.orange {
+    background-color: hsl(34, 97%, 64%);
+}
+
+.blue {
+    background-color: hsl(212, 86%, 64%);
+}
+
+/* Changes for tablets and bigger screens */
+@media screen and (min-width: 1110px) {
+    .all-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 350px); /* It's not necessary to define grid-template-rows,
+        since the rows are created automatically when there're more than 3 container's children */
+        grid-gap: 22px;
+        place-content: center; /* A grid container occupies 100% of its parent width (in this case, tag main) 
+        and its content is aligned left by default. This definition intends to centralize the content. */
+    }
+
+    .corner-column {
+        margin: auto; /* The content of the corner column is placed on top, generating a blank space on bottom
+        (since column height > content height). This definition intends to centralize it. */
+    }
+
+    h1, h4 {
+        font-size: 36px;
+    }
+
+    h2 {
+        display: inline-block; /* Texts occupies 100% of the container width by default. 
+        This definition should allow us to define a smaller width for the text. */
+        width: 500px;
+    }
+}
